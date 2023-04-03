@@ -11,7 +11,7 @@ data class Character(
     @Json(name = "alive")
     val alive: Boolean,
     @Json(name = "alternate_actors")
-    val alternateActors: List<Any>,
+    val alternateActors: List<String>,
     @Json(name = "alternate_names")
     val alternateNames: List<String>,
     @Json(name = "ancestry")
