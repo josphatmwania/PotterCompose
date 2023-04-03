@@ -8,6 +8,16 @@ buildscript {
         // Retrofit
         retrofit_version = "2.9.0"
 
+        // lifecycleVersion
+        lifecycleVersion = '2.6.1'
+
+        kotlinVersion = '1.8.0'
+        ktlintVersion = '0.41.0'
+        coroutines = '1.6.4'
+        moshi_version = '1.12.0'
+
+
+
 
 
 
