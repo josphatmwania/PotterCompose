@@ -4,7 +4,8 @@ buildscript {
         core_ktx = '1.9.0'
 
         // Hilt
-        hilt_version: "2.44"
+        hilt_version = "2.44"
+        hilt_compiler = "1.0.0"
         // Retrofit
         retrofit_version = "2.9.0"
 
@@ -23,7 +24,8 @@ buildscript {
 
 
     }
-}// Top-level build file where you can add configuration options common to all sub-projects/modules.
+}
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
     id 'com.android.application' version '7.2.2' apply false
     id 'com.android.library' version '7.2.2' apply false
