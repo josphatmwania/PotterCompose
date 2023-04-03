@@ -61,6 +61,13 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
 
     // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    // Hilt
+
+    implementation("com.google.dagger:hilt-android:$hilt_android")
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_android"
 
 
 }

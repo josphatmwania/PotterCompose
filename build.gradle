@@ -3,6 +3,13 @@ buildscript {
         compose_version = '1.1.0-beta01'
         core_ktx = '1.9.0'
 
+        // Hilt
+        hilt_version: "2.44"
+        // Retrofit
+        retrofit_version = "2.9.0"
+
+
+
 
 
     }
