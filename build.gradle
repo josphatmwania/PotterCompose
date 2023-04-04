@@ -1,7 +1,7 @@
 buildscript {
     ext {
-        compose_version = '1.1.0-beta01'
-        core_ktx = '1.9.0'
+        compose_version = '1.5.0-alpha01'
+//        core_ktx = '1.9.0'
 
         // Hilt
         hilt_version = "2.44"
@@ -12,19 +12,21 @@ buildscript {
         // lifecycleVersion
         lifecycleVersion = '2.6.1'
 
-        kotlinVersion = '1.8.0'
+        kotlinVersion = '1.8.10'
         ktlintVersion = '0.41.0'
         coroutines = '1.6.4'
         moshi_version = '1.12.0'
 
 
+    }
 
-
-
-
+    dependencies {
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
 
     }
 }
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
     id 'com.android.application' version '7.2.2' apply false
