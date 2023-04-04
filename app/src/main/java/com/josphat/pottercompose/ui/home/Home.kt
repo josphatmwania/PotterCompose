@@ -1,20 +1,23 @@
 package com.josphat.pottercompose.ui.home
 
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import coil.compose.rememberAsyncImagePainter
 import coil.compose.rememberImagePainter
 import com.josphat.pottercompose.data.api.model.Character
 
@@ -47,12 +50,37 @@ fun HomeScreen() {
  */
 @Composable
 fun CharacterImageCard(character: Character) {
-    val imagePainter = rememberImagePainter(data = character.image)
+    val imagePainter = rememberAsyncImagePainter(model = character.image)
 
     Card(
         shape = MaterialTheme.shapes.medium,
         modifier = Modifier.padding(16.dp)
     ) {
+        Box{
+
+            Image(painter = imagePainter, contentDescription = null,
+            modifier = Modifier
+                .fillMaxSize()
+                .height(150.dp),
+            contentScale = ContentScale.FillBounds
+            )
+
+
+            Surface(
+                color = MaterialTheme.colorScheme.onSurface.copy(alpha = .3f),
+                modifier = Modifier.align(Alignment.BottomCenter),
+                contentColor = MaterialTheme.colorScheme.onSurface
+
+            ) {
+
+
+
+            }
+
+
+
+
+        }
 
     }
 }
