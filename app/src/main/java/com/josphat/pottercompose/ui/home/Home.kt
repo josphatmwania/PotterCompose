@@ -36,6 +36,7 @@ fun HomeScreen() {
         }
 
         items(state){character:Character ->
+            CharacterImageCard(character = character)
 
         }
 
