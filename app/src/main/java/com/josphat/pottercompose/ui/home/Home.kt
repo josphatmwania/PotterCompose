@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
-fun homeScreen() {
+fun HomeScreen() {
     val homeViewModel = viewModel(modelClass = HomeViewModel::class.java)
     val state by homeViewModel.state.collectAsState()
 
@@ -28,6 +28,8 @@ fun homeScreen() {
 
             }
         }
+
+        items(state){character}
 
     }
 }
