@@ -2,10 +2,11 @@ buildscript {
     ext {
         compose_version = '1.5.0-alpha01'
 //        core_ktx = '1.9.0'
+        appcompat = '1.5.0'
 
         // Hilt
         hilt_version = "2.44"
-        hilt_compiler = "1.0.0"
+//        hilt_compiler = "1.0.0"
         // Retrofit
         retrofit_version = "2.9.0"
 
@@ -24,6 +25,10 @@ buildscript {
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
 
+    }
+    repositories {
+        mavenCentral()
+        google()
     }
 }
 
