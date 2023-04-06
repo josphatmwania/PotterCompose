@@ -1,7 +1,6 @@
 buildscript {
     ext {
         compose_version = '1.4.1'
-//        core_ktx = '1.9.0'
         appcompat = '1.5.0'
 
         // Hilt
@@ -15,7 +14,7 @@ buildscript {
         kotlinVersion = '1.8.0'
         ktlintVersion = '0.41.0'
         coroutines = '1.6.4'
-        moshi_version = '1.12.0'
+        moshi_version = '1.14.0'
 
 
     }
