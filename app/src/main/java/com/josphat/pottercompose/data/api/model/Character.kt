@@ -17,7 +17,7 @@ data class Character(
     @Json(name = "ancestry")
     val ancestry: String,
     @Json(name = "dateOfBirth")
-    val dateOfBirth: String,
+    val dateOfBirth: String?,
     @Json(name = "eyeColour")
     val eyeColour: String,
     @Json(name = "gender")

@@ -9,7 +9,7 @@ data class Wand(
     @Json(name = "core")
     val core: String,
     @Json(name = "length")
-    val length: String,
+    val length: String?,
     @Json(name = "wood")
     val wood: String
 )
