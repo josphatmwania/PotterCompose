@@ -1,5 +1,6 @@
 package com.josphat.pottercompose.ui.home
 
+import androidx.compose.animation.expandHorizontally
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -14,8 +15,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.AlignmentLine
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -68,13 +71,15 @@ fun CharacterImageCard(character: Character) {
             modifier = Modifier
                 .clip(shape = CircleShape)
                 .height(150.dp),
-            contentScale = ContentScale.FillBounds
+            contentScale = ContentScale.Crop
             )
 
 
             Surface(
                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = .3f),
-                modifier = Modifier.align(Alignment.BottomCenter),
+                modifier = Modifier.align(Alignment.BottomEnd),
+
+
                 contentColor = MaterialTheme.colorScheme.onSurface
 
             ) {
@@ -84,10 +89,11 @@ fun CharacterImageCard(character: Character) {
                         .fillMaxWidth()
                         .padding(4.dp)
 
+
                 ) {
 
-                    Text(text = "Real Name: ${character.actor} ")
-                    Text(text = "Actor Name: ${character.name} ")
+                    Text(text = "Real Name: ${character.actor} ", Modifier.align(Alignment.End))
+                    Text(text = "Actor Name: ${character.name} ", Modifier.align(Alignment.End))
 
 
                     
