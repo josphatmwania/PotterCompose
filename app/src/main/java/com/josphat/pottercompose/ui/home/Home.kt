@@ -97,11 +97,8 @@ fun CharacterImageCard(character: Character) {
                     Text(text = "Real Name: ${character.actor} ", Modifier.align(Alignment.End))
                     Text(text = "Actor Name: ${character.name} ", Modifier.align(Alignment.End))
 
-
-                    
                     
                 }
-
 
 
             }
