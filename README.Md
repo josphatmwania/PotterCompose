@@ -10,7 +10,10 @@ Potter Compose is an Android App buit using Jetpack Compose that displays data f
 I built this app using with Kotlin, Jetpack Compose and implementing the MVVM Architecture, Coroutines, Data Binding, and Dependency Injection. 
 
 
-### Screens
+## Screens
+
+<img src="./screenshots/Screenshot_20230407_225248.png" width=200 height=450>
+
 
  <table>
   <tr>
@@ -23,7 +26,6 @@ I built this app using with Kotlin, Jetpack Compose and implementing the MVVM Ar
 
   </tr>
  </table>
-
 
 
 
