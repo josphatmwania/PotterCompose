@@ -12,8 +12,6 @@ I built this app using with Kotlin, Jetpack Compose and implementing the MVVM Ar
 
 ## Screens
 
-<img src="./screenshots/Screenshot_20230407_225248.png" width=200 height=450>
-
 
  <table>
   <tr>
