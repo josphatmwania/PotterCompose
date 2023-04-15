@@ -20,7 +20,8 @@ I built this app using with Kotlin, Jetpack Compose and implementing the MVVM Ar
   </tr>
   <tr>
     <td><img src="./screenshots/Screenshot_20230407_225248.png" width=200 height=450></td>
-    <td><img src="./screenshots/Screenshot_20230407_225248.png" width=200 height=450></td>
+
+[comment]: <> (    <td><img src="./screenshots/Screenshot_20230407_225248.png" width=200 height=450></td>)
 
   </tr>
  </table>
