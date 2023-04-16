@@ -3,7 +3,7 @@
 Potter Compose is an Android App buit using Jetpack Compose that displays data from Harry Potter API.
 
 ## PotterCompose Documentation
-[Harry Potter Documentation](https://hp-api.onrender.com/)
+Harry Potter Documentation [Harry Potter Documentation](https://hp-api.onrender.com/)
 
 # Description
 
