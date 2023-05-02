@@ -62,7 +62,7 @@ fun CharacterImageCard(character: Character) {
         
         Column(
             modifier = Modifier
-            .padding(4.dp))
+            .padding(80.dp))
 
         {
             Text(text = "Real Name: ${character.actor}")
