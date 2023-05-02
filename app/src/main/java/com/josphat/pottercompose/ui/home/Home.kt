@@ -12,11 +12,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.rememberAsyncImagePainter
-import coil.compose.rememberImagePainter
 import com.josphat.pottercompose.data.api.model.Character
 
 
@@ -77,12 +75,12 @@ fun CharacterImageCard(character: Character) {
             modifier = Modifier
             .padding(15.dp))
 
-        {
-            Text(text = "Real Name: ${character.actor}" )
-            var fontWeight = FontWeight.Bold
 
+
+
+        {
+            Text(text = "Real Name: ${character.actor}")
             Text(text = "Actor Name:${character.name}")
-//            fontWeight = FontWeight.Bold
         }
 
 
