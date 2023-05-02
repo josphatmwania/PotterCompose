@@ -11,6 +11,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.rememberAsyncImagePainter
 import com.josphat.pottercompose.data.api.model.Character
@@ -49,12 +50,21 @@ fun HomeScreen() {
 fun CharacterImageCard(character: Character) {
     val imagePainter = rememberAsyncImagePainter(model = character.image)
     
-    Row(verticalAlignment = Alignment.CenterVertically) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Start
+    )
+
+    {
         Image(painter = imagePainter, contentDescription = null)
 
         // Add modifier later
         
-        Column(modifier = Modifier) {
+        Column(
+            modifier = Modifier
+            .padding(4.dp))
+
+        {
             Text(text = "Real Name: ${character.actor}")
             Text(text = "Actor Name: ${character.name}")
         }
