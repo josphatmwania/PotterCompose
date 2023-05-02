@@ -59,7 +59,7 @@ fun CharacterImageCard(character: Character) {
 
     Row(
 
-//        verticalAlignment = Alignment.Top,
+        verticalAlignment = Alignment.Top,
         horizontalArrangement = Arrangement.Start,
 
 
