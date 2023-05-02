@@ -16,7 +16,6 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.rememberImagePainter
 import com.josphat.pottercompose.data.api.model.Character
-import androidx.compose.foundation.shape.CircleShape
 
 
 @Composable
