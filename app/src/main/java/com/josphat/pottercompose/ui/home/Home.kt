@@ -59,18 +59,20 @@ fun HomeScreen() {
 fun CharacterImageCard(character: Character) {
 
     Row(
-//        verticalAlignment = Alignment.Top,
+        verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Start,
+
 
     )
 
     {
         Image(
             modifier = Modifier
-                .width(150.dp)
+                .width(100.dp)
                 .clip(shape = CircleShape)
 //                .clip(CircleShape(50.dp))
-                .height(90.dp),
+                .padding(25.dp)
+                .height(75.dp),
 
             painter = rememberImagePainter(data = character.image),
             contentDescription = null )
