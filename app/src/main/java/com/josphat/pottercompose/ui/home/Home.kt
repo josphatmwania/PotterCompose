@@ -21,6 +21,7 @@ import coil.compose.rememberAsyncImagePainter
 import coil.compose.rememberImagePainter
 import com.josphat.pottercompose.data.api.model.Character
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.shape.CircleShape
 import coil.compose.AsyncImagePainter.State.Empty.painter
 
 
@@ -58,19 +59,18 @@ fun HomeScreen() {
 fun CharacterImageCard(character: Character) {
 
     Row(
-
-        verticalAlignment = Alignment.Top,
+//        verticalAlignment = Alignment.Top,
         horizontalArrangement = Arrangement.Start,
-
 
     )
 
     {
         Image(
             modifier = Modifier
-                .width(190.dp)
-                .clip(RoundedCornerShape(50.dp))
-                .height(180.dp),
+                .width(150.dp)
+                .clip(shape = CircleShape)
+//                .clip(CircleShape(50.dp))
+                .height(90.dp),
 
             painter = rememberImagePainter(data = character.image),
             contentDescription = null )
