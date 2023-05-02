@@ -1,12 +1,9 @@
 package com.josphat.pottercompose.ui.home
 
-import androidx.compose.animation.expandHorizontally
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -56,12 +53,12 @@ fun CharacterImageCard(character: Character) {
 
         // Add modifier later
         
-        Column( modifier = Modifier(
-            Text(text = "Real Name: ${character.actor} "),
+        Column(modifier = Modifier) {
+            Text(text = "Real Name: ${character.actor} ")
             Text(text = "Actor Name: ${character.name}")
-        ) {
-
         }
+
+
         
     }
     
