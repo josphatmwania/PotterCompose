@@ -57,16 +57,17 @@ fun CharacterImageCard(character: Character) {
         horizontalArrangement = Arrangement.Start,
 
 
+
     )
 
     {
         Image(
             modifier = Modifier
                 .width(100.dp)
-                .clip(shape = CircleShape)
-//                .clip(CircleShape(50.dp))
+                .clip(RoundedCornerShape(15.dp))
                 .padding(10.dp)
                 .height(75.dp),
+
 
             painter = rememberImagePainter(data = character.image),
             contentDescription = null )
