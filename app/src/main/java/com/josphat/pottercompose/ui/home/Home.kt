@@ -54,62 +54,28 @@ fun HomeScreen() {
 /**
  * Using COil to load images
  */
+
+
 @Composable
 fun CharacterImageCard(character: Character) {
     val imagePainter = rememberAsyncImagePainter(model = character.image)
+    
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Image(painter = imagePainter, contentDescription = null)
 
-    Card(
-//        shape = MaterialTheme.shapes.medium,
-        modifier = Modifier.padding(16.dp),
-        shape = RoundedCornerShape(size = 10.dp)
-
-
-    ) {
-        Box{
-
-            Image(painter = imagePainter, contentDescription = null,
-            modifier = Modifier
-                .clip(shape = CircleShape)
-                .height(150.dp),
-            contentScale = ContentScale.Crop
-            )
-
-
-            Surface(
-                color = MaterialTheme.colorScheme.onSurface.copy(alpha = .3f),
-                modifier = Modifier.align(Alignment.BottomEnd),
-
-
-                contentColor = MaterialTheme.colorScheme.onSurface
-
-            ) {
-                
-                Column( 
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(4.dp)
-
-
-
-                ) {
-
-
-                    Text(text = "Real Name: ${character.actor} ", Modifier.align(Alignment.End))
-                    Text(text = "Actor Name: ${character.name} ", Modifier.align(Alignment.End))
-
-                    
-                }
-
-
-            }
-
-
-
+        // Add modifier later
+        
+        Column( modifier = Modifier(
+            Text(text = "Real Name: ${character.actor} "),
+            Text(text = "Actor Name: ${character.name}")
+        ) {
 
         }
-
+        
     }
-}
+    
 
+    
+}
 
 
