@@ -10,6 +10,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.rememberAsyncImagePainter
 import com.josphat.pottercompose.data.api.model.Character
@@ -54,7 +55,7 @@ fun CharacterImageCard(character: Character) {
         // Add modifier later
         
         Column(modifier = Modifier) {
-            Text(text = "Real Name: ${character.actor} ")
+            Text(text = "Real Name: ${character.actor}")
             Text(text = "Actor Name: ${character.name}")
         }
 
@@ -65,5 +66,10 @@ fun CharacterImageCard(character: Character) {
 
     
 }
+
+
+
+
+
 
 
