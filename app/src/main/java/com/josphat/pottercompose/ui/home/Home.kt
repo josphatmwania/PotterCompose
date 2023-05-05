@@ -12,7 +12,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -66,13 +65,15 @@ fun CharacterImageCard(character: Character) {
         Image(
             modifier = Modifier
                 .width(100.dp)
-                .shadow(elevation =  2.dp, clip = true, shape = CircleShape)
+                .shadow(elevation =  2.dp,  clip = true, shape = CircleShape)
                 .padding(2.dp)
                 .height(125.dp),
-//                .contentScale = ContentScale.Crop
+
+
 
             painter = rememberAsyncImagePainter(model = character.image),
-            contentDescription = null )
+
+            contentDescription = "Image" )
 
         Column(
             modifier = Modifier.padding(15.dp)
