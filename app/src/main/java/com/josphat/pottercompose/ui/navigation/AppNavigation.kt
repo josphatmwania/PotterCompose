@@ -1,8 +1,9 @@
 package com.josphat.pottercompose.ui.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.input.key.Key.Companion.Home
 import androidx.navigation.NavHost
+import androidx.navigation.compose.rememberNavController
+
 
 
 @Composable
@@ -16,7 +17,7 @@ fun AppNavigation() {
     composable(NavRoutes.Details.route + "/{id}") {
         Details(
             onBackPressed = {
-                navController.popBacktack()
+                navController.popBackStack()
             }
         )
     }
