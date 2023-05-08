@@ -1,18 +1,11 @@
 package com.josphat.pottercompose.ui.detail
 
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Row
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.TopAppBar
+
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.res.painterResource
-import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.lifecycle.viewmodel.compose.viewModel
-import coil.compose.rememberAsyncImagePainter
-import com.josphat.pottercompose.R
+
 
 @Composable
 fun Details() {
@@ -24,6 +17,12 @@ fun Details() {
 //    onBackPressed : () -> Unit
 
 }
+
+
+
+
+
+
 
 
 //
