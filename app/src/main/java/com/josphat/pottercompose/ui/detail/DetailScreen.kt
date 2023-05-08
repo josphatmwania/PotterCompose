@@ -10,39 +10,53 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.painterResource
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
+import coil.compose.rememberAsyncImagePainter
 import com.josphat.pottercompose.R
 
 @Composable
-fun Details(
-    viewModel: DetailViewModel = hiltViewModel(),
-    onBackPressed : () -> Unit
-) {
-    val state = viewModel.state.value
-    
-    
-    Scaffold(  
-        topBar = {
-            TopAppBar( 
-                navigationIcon = {
-                    IconButton(onClick = { onBackPressed() }) {
-                        Image(painter = painterResource(id = R.drawable.arrow_back), contentDescription = "")
-                        
-                    }
-                },
-                title = {}
-            )
-                
+fun Details() {
 
-        }
-    ){
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.Start
-        ) {
+    val detailViewModel = viewModel(modelClass = DetailViewModel::class.java)
+    val state by detailViewModel.state.collectAsState()
 
-        }
-        
-    }
+
+//    onBackPressed : () -> Unit
 
 }
 
+
+//
+//{
+//    val state = viewModel.state.value
+//
+//
+//    Scaffold(
+//        topBar = {
+//            TopAppBar(
+//                navigationIcon = {
+//                    IconButton(onClick = { onBackPressed() }) {
+//                        Image(painter = painterResource(id = R.drawable.arrow_back), contentDescription = "")
+//
+//                    }
+//                },
+//                title = {}
+//            )
+//
+//
+//        }
+//    ){
+//        Row(
+//            verticalAlignment = Alignment.CenterVertically,
+//            horizontalArrangement = Arrangement.Start
+//        ) {
+//            Image(
+//
+//                painter = rememberAsyncImagePainter(model = character.image), contentDescription = )
+//
+//        }
+//
+//    }
+//
+//}
+//
