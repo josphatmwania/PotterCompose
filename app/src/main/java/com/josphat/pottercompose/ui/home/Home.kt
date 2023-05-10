@@ -52,14 +52,13 @@ fun HomeScreen() {
 }
 
 /**
- * Using COil to load images
+ * Using Coil to load images
  */
 @Composable
 fun CharacterImageCard(character: Character) {
     val imagePainter = rememberAsyncImagePainter(model = character.image)
 
     Card(
-//        shape = MaterialTheme.shapes.medium,
         modifier = Modifier.padding(16.dp),
         shape = RoundedCornerShape(size = 10.dp)
 
