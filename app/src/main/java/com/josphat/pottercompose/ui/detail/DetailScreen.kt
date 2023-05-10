@@ -14,7 +14,11 @@ fun Details() {
     val state by detailViewModel.state.collectAsState()
 
 
-//    onBackPressed : () -> Unit
+    // Back arrow for navigation
+
+
+
+
 
 }
 
