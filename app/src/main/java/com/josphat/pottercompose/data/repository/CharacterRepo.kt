@@ -4,7 +4,7 @@ import com.josphat.pottercompose.data.api.CharaterApi
 import com.josphat.pottercompose.data.api.model.Character
 import javax.inject.Inject
 
-class CharacterRepo @Inject constructor(
+class  CharacterRepo @Inject constructor(
     private val charaterApi: CharaterApi
 ){
 
