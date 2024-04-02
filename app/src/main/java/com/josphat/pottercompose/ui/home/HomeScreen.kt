@@ -1,6 +1,5 @@
 package com.josphat.pottercompose.ui.home
 
-import androidx.compose.animation.expandHorizontally
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -14,16 +13,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.AlignmentLine
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.rememberAsyncImagePainter
-import coil.compose.rememberImagePainter
 import com.josphat.pottercompose.data.api.model.Character
 
 @Composable
@@ -42,6 +35,7 @@ fun HomeScreen() {
 
             }
         }
+// Todo: Add the items to the list
 
         items(state){character:Character ->
             CharacterImageCard(character = character)
@@ -52,7 +46,7 @@ fun HomeScreen() {
 }
 
 /**
- * Using COil to load images
+ * Using Coil to load images asynchronously
  */
 @Composable
 fun CharacterImageCard(character: Character) {
