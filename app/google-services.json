@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "273547379924",
+    "project_id": "potter-compose",
+    "storage_bucket": "potter-compose.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:273547379924:android:81f383008cb53d19796741",
+        "android_client_info": {
+          "package_name": "com.josphat.pottercompose"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeeTXbLcXfBxTD84wqyLDa9EOgGibUGSI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
