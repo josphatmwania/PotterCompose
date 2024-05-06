@@ -52,7 +52,7 @@ fun HomeScreen() {
 }
 
 /**
- * Using COil to load images
+ * Using Coil to load images
  */
 @Composable
 fun CharacterImageCard(character: Character) {
@@ -61,7 +61,7 @@ fun CharacterImageCard(character: Character) {
     Card(
 //        shape = MaterialTheme.shapes.medium,
         modifier = Modifier.padding(16.dp),
-        shape = RoundedCornerShape(size = 100.dp)
+        shape = RoundedCornerShape(size = 30.dp)
 
 
     ) {
@@ -87,15 +87,15 @@ fun CharacterImageCard(character: Character) {
                 Column( 
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(4.dp)
+                        .padding(14.dp)
 
 
 
                 ) {
 
 
-                    Text(text = "Real Name: ${character.actor} ", Modifier.align(Alignment.CenterHorizontally))
-                    Text(text = "Actor Name: ${character.name} ", Modifier.align(Alignment.CenterHorizontally))
+                    Text(text = "Real Name: ${character.actor} ", Modifier.align(Alignment.End))
+                    Text(text = "Actor Name: ${character.name} ", Modifier.align(Alignment.End))
 
                     
                 }
