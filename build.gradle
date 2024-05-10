@@ -16,6 +16,9 @@ buildscript {
         coroutines = '1.6.4'
         moshi_version = '1.14.0'
 
+        val room_version = "2.6.1"
+
+
 
     }
 
