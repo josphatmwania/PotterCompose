@@ -1,12 +1,6 @@
-package com.josphat.pottercompose.db.entities
+package com.josphat.pottercompose.model
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-import com.josphat.pottercompose.data.api.model.Wand
-
-
-@Entity(tableName = "characters_table")
-data class CharacterEntity(
+data class HarrypotterResponseDtoItem(
     val actor: String?,
     val alive: Boolean?,
     val alternate_actors: List<String>?,
@@ -19,13 +13,12 @@ data class CharacterEntity(
     val hogwartsStaff: Boolean?,
     val hogwartsStudent: Boolean?,
     val house: String?,
-    @PrimaryKey(autoGenerate = false)
-    val id: String,
+    val id: String?,
     val image: String?,
     val name: String?,
     val patronus: String?,
     val species: String?,
-//    val wand: Wand?,
+    val wand: Wand?,
     val wizard: Boolean?,
     val yearOfBirth: Int?
 )
