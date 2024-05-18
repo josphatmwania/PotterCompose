@@ -88,7 +88,9 @@ dependencies {
     // To use Kotlin annotation processing tool (kapt)
     kapt("androidx.room:room-compiler:$room_version")
     // To use Kotlin Symbol Processing (KSP)
-    ksp("androidx.room:room-compiler:$room_version")
+//    ksp("androidx.room:room-compiler:$room_version")
+//    id 'androidx.room:androidx.room.gradle.plugin:2.6.1'
+//    id 'com.google.devtools.ksp' version '1.8.0-1.0.8'
 
 
 
