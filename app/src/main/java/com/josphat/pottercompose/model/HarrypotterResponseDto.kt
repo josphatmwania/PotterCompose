@@ -1,4 +1,4 @@
-package com.josphat.pottercompose.model
-
-class HarrypotterResponseDto : ArrayList<HarrypotterResponseDtoItem>   {
-}
+//package com.josphat.pottercompose.model
+//
+//class HarrypotterResponseDto : ArrayList<HarrypotterResponseDtoItem>   {
+//}

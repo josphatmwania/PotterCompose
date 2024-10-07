@@ -1,10 +1,10 @@
 package com.josphat.pottercompose.ui.home
 
-import androidx.compose.animation.expandHorizontally
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
@@ -14,116 +14,86 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.AlignmentLine
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.rememberAsyncImagePainter
-import coil.compose.rememberImagePainter
 import com.josphat.pottercompose.data.api.model.Character
 
 @Composable
 fun HomeScreen() {
-    val homeViewModel = viewModel(modelClass = HomeViewModel::class.java)
-    val state by homeViewModel.state.collectAsState()
+    val homeViewModel: HomeViewModel = viewModel() // Get the viewModel
+    val state by homeViewModel.state.collectAsState() // Collect state from the ViewModel
 
-    LazyColumn {
-        if (state.isEmpty()) {
-            item {
-                CircularProgressIndicator(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .wrapContentSize(align = Alignment.Center)
-                )
-
+    if (state.isEmpty()) {
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center
+        ) {
+            CircularProgressIndicator()
+        }
+    } else {
+        // Todo: Use LazyVerticalGrid to display characters in a grid
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(2), //Todo:  Display 2 characters per row
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(16.dp)
+        ) {
+            items(state) { character: Character ->
+                CharacterImageCard(character = character)
             }
         }
-
-        items(state){character:Character ->
-            CharacterImageCard(character = character)
-
-        }
-
     }
 }
 
 /**
- * Using Coil to load images
+ *  Todo: Use Coil to load images
  */
 @Composable
 fun CharacterImageCard(character: Character) {
     val imagePainter = rememberAsyncImagePainter(model = character.image)
 
     Card(
-//        shape = MaterialTheme.shapes.medium,
-        modifier = Modifier.padding(16.dp),
+        modifier = Modifier
+            .padding(8.dp)
+            .fillMaxWidth(), // Fill max width for proper layout
         shape = RoundedCornerShape(size = 30.dp)
-
-
     ) {
-        Box{
-
-            Image(painter = imagePainter, contentDescription = null,
-            modifier = Modifier
-                .clip(shape = CircleShape)
-                .height(150.dp),
-            contentScale = ContentScale.Crop
+        Column {
+            Image(
+                painter = imagePainter,
+                contentDescription = null,
+                modifier = Modifier
+                    .clip(shape = CircleShape)
+                    .height(150.dp)
+                    .fillMaxWidth(),
+                contentScale = ContentScale.Crop
             )
-
 
             Surface(
                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = .3f),
-                modifier = Modifier.align(Alignment.BottomEnd),
-
-
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp),
                 contentColor = MaterialTheme.colorScheme.onSurface
-
             ) {
-                
-                Column( 
+                Column(
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(14.dp)
-
-
-
+                        .padding(8.dp)
                 ) {
-
-
+                    // Display character information
                     Text(
-                        text = "Real Name: ${character.actor} ",
-                        Modifier.align(Alignment.End),
-                        style = MaterialTheme.typography.bodyLarge
-
-
-                        )
-
-
+                        text = "Actor Name: ${character.name}",
+                        style = MaterialTheme.typography.bodySmall,
+                        modifier = Modifier.padding(bottom = 4.dp)
+                    )
                     Text(
-                        text = "Actor Name: ${character.name} ",
-                        Modifier.align(Alignment.End),
+                        text = "Real Name: ${character.actor}",
                         style = MaterialTheme.typography.bodySmall
-
-                        )
-
-
-                    
+                    )
                 }
-
-
             }
-
-
-
-
         }
-
     }
 }
-
-
-
