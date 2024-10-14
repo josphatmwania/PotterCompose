@@ -35,7 +35,7 @@ fun HomeScreen() {
     } else {
         // Todo: Use LazyVerticalGrid to display characters in a grid
         LazyVerticalGrid(
-            columns = GridCells.Fixed(2), //Todo:  Display 2 characters per row
+            columns = GridCells.Fixed(3), //Todo:  Display 2 characters per row
             modifier = Modifier
                 .fillMaxSize()
                 .padding(16.dp)
