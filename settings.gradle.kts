@@ -1,3 +1,4 @@
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -13,5 +14,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "PotterCompose"
-include ':app'
-//startParameter.offline=false
+include(":app")

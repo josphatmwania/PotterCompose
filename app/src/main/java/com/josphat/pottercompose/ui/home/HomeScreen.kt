@@ -17,6 +17,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.rememberAsyncImagePainter
 import com.josphat.pottercompose.data.api.model.Character
 
