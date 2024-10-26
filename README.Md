@@ -16,7 +16,8 @@ I built this app using with Kotlin, Jetpack Compose and implementing the MVVM Ar
  <table>
   <tr>
     <td>Home Screen</td>
-    <td>Detail Screen</td>
+
+[//]: # (    <td>Detail Screen</td>)
   </tr>
   <tr>
     <td><img src="./screenshots/Screenshot_20241007_082420.png" width=200 height=450></td>
